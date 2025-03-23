@@ -20,7 +20,7 @@ String b="c";
 System.out.println(a+b);
 }
 }
-//Click Review button
+//Click Review button & wait 10 to 15 seconds
   `)
 
   const [ review, setReview ] = useState(``)
