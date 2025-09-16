@@ -1,95 +1,63 @@
-/* Custom styles for the code editor and markdown content */
-.prose {
-  max-width: none;
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
 }
 
-.prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
-  color: #1f2937;
-  font-weight: 600;
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
 }
 
-.prose p {
-  margin-bottom: 1rem;
-  line-height: 1.6;
+main {
+  height: 100%;
+  width: 100%;
+  padding: 1.5rem;
+  display: flex;
+  gap: 1rem;
 }
 
-.prose ul, .prose ol {
-  margin-bottom: 1rem;
-  padding-left: 1.5rem;
+main .left,
+main .right {
+  height: 100%;
+  flex-basis: 50%;
+  border-radius: 0.7rem;
 }
 
-.prose li {
-  margin-bottom: 0.5rem;
+main .left {
+  background-color: #000000;
+  position: relative;
 }
 
-.prose code {
-  background-color: #f3f4f6;
-  padding: 0.125rem 0.25rem;
-  border-radius: 0.25rem;
-  font-size: 0.875rem;
-  color: #1f2937;
+.left .code,
+.code pre,
+.code pre code {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  border-radius: 0.7rem;
+  background-color: #fbf4f4;
 }
 
-.prose pre {
-  background-color: #1f2937;
-  color: #f9fafb;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  overflow-x: auto;
-  margin: 1rem 0;
+main .left .review {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: rgb(219, 219, 255);
+  color: #000000;
+  padding: 0.5rem 2rem;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 0.7rem;
 }
 
-.prose pre code {
-  background-color: transparent;
-  color: inherit;
-  padding: 0;
-}
 
-.prose blockquote {
-  border-left: 4px solid #3b82f6;
-  padding-left: 1rem;
-  margin: 1rem 0;
-  font-style: italic;
-  color: #6b7280;
-}
-
-/* Smooth transitions for interactive elements */
-.transition-all {
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
-/* Custom scrollbar for code editor */
-.code-editor::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-
-.code-editor::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 4px;
-}
-
-.code-editor::-webkit-scrollbar-thumb {
-  background: #c1c1c1;
-  border-radius: 4px;
-}
-
-.code-editor::-webkit-scrollbar-thumb:hover {
-  background: #a8a8a8;
-}
-
-/* Loading animation */
-@keyframes pulse {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: .5;
-  }
-}
-
-.animate-pulse {
-  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+main .right {
+  background-color: #f9f2f2;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  overflow: auto;
 }
