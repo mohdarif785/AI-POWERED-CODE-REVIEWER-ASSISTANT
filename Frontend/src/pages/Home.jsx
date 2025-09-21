@@ -3,7 +3,7 @@ import { useAuth } from '../contexts/AuthContext';
 import { 
   CodeBracketIcon, 
   SparklesIcon, 
-  ShieldCheckIcon, 
+  ShieldCheckIcon,
   RocketLaunchIcon,
   CheckCircleIcon,
   ArrowRightIcon
